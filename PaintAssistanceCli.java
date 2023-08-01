@@ -29,7 +29,7 @@ public class PaintAssistanceCli
             boolean valid = true;
             do
             {
-                System.out.println("Enter paint mix:");
+                System.out.print("Enter paint mix:");
                 String input = kbd.nextLine().toUpperCase();
                 System.out.println("");   
                 if(input.length() != 5)
@@ -60,11 +60,10 @@ public class PaintAssistanceCli
                 {
                     System.out.println("");   
                     System.out.println("Invalid paint mix!");
+                    kbd.nextLine();
                     System.out.println("");   
                 }
             } while (!valid);
         }
     }
 }
-
-
