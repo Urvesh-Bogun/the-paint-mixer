@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class PaintMix
 {
     private char[] paint = new char[5];
@@ -10,6 +12,21 @@ public class PaintMix
     public char getPaint(int i)
     {
         return this.paint[i];
+    }
+
+    @Override
+    public boolean equals(Object o) 
+    {
+        if (this == o)
+        { 
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) 
+        {
+            return false;
+        }
+        PaintMix paintMix = (PaintMix) o;
+        return Arrays.equals(paint, paintMix.paint);
     }
     
     public String toString()
